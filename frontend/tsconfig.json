@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "alwaysStrict": true,
+        "outDir": "./dist/script/",
+        "noImplicitAny": true,
+        "module": "es6",
+        "target": "es6",
+        "newLine": "crlf",
+        "sourceMap": true,
+        "allowJs": true,
+        "checkJs": true,
+        "moduleResolution": "node",
+        "pretty": true,
+        "rootDir": ".",
+        "lib": [
+            "ES6",
+            "DOM",
+        ],
+        "esModuleInterop": true,
+    },
+    "files": [
+        "./index.d.ts"
+    ],
+    "include": [
+        "index.d.ts",
+        "**/*.ts",
+        "./src/*.js",
+    ]
+}
