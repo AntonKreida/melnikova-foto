@@ -1,18 +1,24 @@
-// -----------------------------------------------------------------------------
-// This file contains a list of imported files
-// -----------------------------------------------------------------------------
+/**
+*
+* This file contains a list of imported files.
+*
+*/
 
 // 1 - ABSTRACTS
-
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
 
 // 2 - BASE
-
+@import "./base/typography";
+@import "./base/base";
 
 // 3 - COMPONENTS
-
+@import "./components/nav";
+@import "./components/submenu";
+@import "./components/contacts";
+@import "./components/button";
 
 // 4 - LAYOUT
-
+@import "./layout/sidebar";
 
 // 5 - PAGES
-

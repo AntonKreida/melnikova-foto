@@ -6,12 +6,12 @@ const filename = (ext) => (isDev ? `[name].${ext}` : `[name][contenthash].${ext}
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
   entry: {
-    index: path.resolve(__dirname, 'src/app/views/pages/scripts', 'index.ts'),
-    main: path.resolve(__dirname, 'src/app/views/pages/scripts', 'main.ts'),
+    index__home: path.resolve(__dirname, 'src/app/views/pages/home', 'index.ts'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -31,10 +31,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/app/views/pages', 'index.html'),
+      template: path.resolve(__dirname, 'src/app/views/pages/home/', 'index.pug'),
       path: path.resolve(__dirname, 'dist'),
       filename: 'index.html',
-      chunks: ['index'],
+      chunks: ['index__home'],
       minify: {
         collapseWhitespace: isProd,
       },
@@ -42,6 +42,22 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: './style/main.css',
     }),
+    new CopyPlugin({
+      patterns: [{
+        from: "*.png",
+        to: "images/social_icon",
+        context: path.resolve(__dirname, 'src', 'asset', 'images', 'social_icon')
+      }
+      ],
+    }),
+    new CopyPlugin({
+      patterns: [{
+        from: "*.svg",
+        to: "images/nav_icon",
+        context: path.resolve(__dirname, 'src', 'asset', 'images', 'nav_icon')
+      }
+      ],
+    })
   ],
   devtool: isProd ? false : 'source-map',
   optimization: {
@@ -51,7 +67,21 @@ module.exports = {
     rules: [
       {
         test: /\.html$/i,
-        loader: 'html-loader',
+        use: 'html-loader',
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.pug$/i,
+        loader: 'pug-loader',
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: './fonts/[name].[ext]',
+        },
+        exclude: /node_modules/,
       },
       {
         test: /\.(c|sa|sc)ss$/i,
@@ -60,6 +90,7 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+        exclude: /node_modules/,
       },
       {
         test: /\.tsx?$/i,

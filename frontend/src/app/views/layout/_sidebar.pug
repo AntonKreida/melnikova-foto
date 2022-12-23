@@ -1,0 +1,48 @@
+include ../mixins/_submenu-item
+
+- var valueList =["Лукбуки", "Кампейн", "Предметное фото", "Бьюти съемка"]
+
+aside(class="sidebar")
+    div(class="sidebar__inner")
+        div(class="sidebar__header")
+            a(href="/index.html")
+                h1(class="sidebar__title title")
+                    |Александра Мельникова
+            h2(class="sidebar__subtitle subtitle")
+                |Профессиональная съемка в Тюмени
+        nav(class="sidebar__nav nav")
+            ul(class="nav__list")
+                li(class="nav__item")
+                    a(class="nav__link" href="/")
+                        |Обо мне
+                li(class="nav__item submenu js-submenu")
+                    span(class="nav__link")
+                        |Для брендов
+                        include ../components/_icon-svg.pug
+                    +submenu-list(valueList)
+                li(class="nav__item")
+                    a(class="nav__link" href="/")
+                        |Для блогов и экспертов
+                li(class="nav__item")
+                    a(class="nav__link" href="/")
+                        |Личные фотосессии
+                li(class="nav__item")
+                    a(class="nav__link" href="/")
+                        |Публикации в журнале
+                li(class="nav__item")
+                    a(class="nav__link" href="/")
+                        |Прайс
+                li(class="nav__item")
+                    a(class="nav__link" href="/")
+                        |Отзывы
+        div(class="sidebar__contacts contacts")
+            a(class="contacts__tel" href="tel:89220070075")
+                |+7 (922) 007-00-75
+            div(class="contacts__social")
+                a(href="https://vk.com/melnikova_photo72")
+                    img(class="contacts__img" src="../images/social_icon/icon_vk.png")
+                a(href="https://t.me/Aleksandra_Melnikova")
+                    img(class="contacts__img" src="../images/social_icon/icon_telegram.png")
+                a(href="https://wa.me/89220070075")
+                    img(class="contacts__img" src="../images/social_icon/icon_whatsapp.png")
+            include ../components/_button.pug

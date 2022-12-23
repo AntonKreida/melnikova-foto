@@ -1,0 +1,58 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: $gabriela;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.28;
+  color: $mine-shaft;
+  background: $white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  display: inline-block;
+  max-width: max-content;
+  text-decoration: none;
+  color: $mine-shaft;
+}
+
+svg {
+  display: inline-block;
+  vertical-align: top;
+
+  path {
+    stroke: $white;
+  }
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+.title {
+  @include title($weight-title, $mine-shaft);
+}
+
+.subtitle {
+  @include subtitle($weight-subtitle, $mine-shaft);
+}

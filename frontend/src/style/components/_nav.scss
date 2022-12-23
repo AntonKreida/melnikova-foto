@@ -1,0 +1,83 @@
+.nav {
+  @include text-nav($weight-nav, $mine-shaft, $size-nav);
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    position: relative;
+    padding: $padding-item;
+    width: max-content;
+    transition: color 0.2s linear;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      width: 3px;
+      height: 16px;
+      background: $gray;
+      opacity: 0;
+      transition: all 0.2s linear;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:hover > .nav__link,
+    &:hover svg path {
+      color: $gray;
+      fill: $gray;
+      stroke: $gray;
+    }
+
+    &.active::before {
+      background: $alto;
+      opacity: 1;
+    }
+
+    &.active > .nav__link,
+    &.active svg path {
+      color: $alto;
+      fill: $alto;
+      stroke: $alto;
+    }
+
+    &.active .nav__link svg {
+      transform: rotate(360deg);
+    }
+
+    &.active .submenu__list {
+      padding: $padding-list;
+      max-height: 100%;
+    }
+
+    &.active .submenu__list .submenu__item {
+      margin-top: 0;
+      max-height: 100%;
+    }
+  }
+
+  &__link {
+    transition: color 0.2s linear;
+  }
+
+  &__icon {
+    width: 15px;
+    height: 13px;
+    fill: $mine-shaft;
+    transform: rotate(180deg);
+    transition: all 0.3s linear;
+
+    path {
+      stroke: $mine-shaft;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.5;
+      transition: all 0.3s linear;
+    }
+  }
+}

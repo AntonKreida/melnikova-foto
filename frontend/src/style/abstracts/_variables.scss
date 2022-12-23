@@ -1,19 +1,50 @@
-// -----------------------------------------------------------------------------
-// This file contains all application-wide Sass variables.
-// -----------------------------------------------------------------------------
+/**
+*
+* This file contains all application-wide Sass variables.
+*
+*/
 
-/// Regular font-family
-$text-font-stack: "StratosSkyeng";
+/// REGULAR FONT-FAMILY
+$gabriela: "Gabriela";
+$futura-regular: "FuturaPT-Medium";
 
-/// Copy color
-$black: rgb(0 0 0);
-$white: rgb(255 255 255);
-$congress-blue: rgb(0 73 128);
-$congress-blue-opacity: rgb(0 73 128 / 90%);
-$lochmara: rgb(0 128 193);
-$onahau: rgb(194 245 255);
-$bubbles: rgb(228 251 255);
-$limeade: rgb(122 193 0);
-$lime: rgb(163 255 5);
-$christi: rgb(122 169 20);
-$geyser: rgb(222 230 232);
+/// COPY COLOR
+$white: #fff;
+$black: #000;
+$mine-shaft: #333;
+$alto: #d9d9d9;
+$mercury: #e8e8e8;
+$gray: #848484;
+
+/// WIDTH COMPONENTS AND LAYOUT
+$width-sidebar: 359px;
+$width-social: 20px;
+$width-btn: 187px;
+
+/// HEIGHT COMPONENTS AND LAYOUT
+$height-social: 20px;
+$height-btn: 48px;
+$height-nav-link: 100%;
+
+/// PADDING COMPONENTS AND LAYOUT
+$padding-sidebar: 5% 0 5% 60px;
+$padding-btn: 15px 25px;
+$padding-item: 15px 0;
+$padding-list: 15px 0 0 0;
+$padding-list-item: 15px 0 15px 10px;
+$padding-list-item-last: 15px 0 0 10px;
+
+/// FONT-SIZE
+$size-title: 36px;
+$size-subtitle: 15px;
+$size-nav: 11px;
+$size-tel: 14px;
+
+///FONT-WEIGHT
+$weight-title: 400;
+$weight-subtitle: 400;
+$weight-nav: 450;
+$weight-btn: 450;
+
+///OPACITY
+$opacity-btn: 0.67;

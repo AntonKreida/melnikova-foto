@@ -2,12 +2,34 @@
 // This file contains all @mixin for the project
 // -----------------------------------------------------------------------------
 
-@mixin font {
-  font-family: $text-font-stack;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 40px;
-  line-height: 1.2;
-  text-align: center;
-  color: $congress-blue;
+@mixin text-nav($weight, $color, $font-size) {
+  font-family: $futura-regular;
+  font-weight: $weight;
+  font-size: $font-size;
+  line-height: 1.27;
+  text-transform: uppercase;
+  color: $color;
+}
+
+/// TITLE
+@mixin title($weight, $color) {
+  font-weight: $weight;
+  text-transform: uppercase;
+  color: $color;
+}
+
+/// SUBTITLE
+@mixin subtitle($wight, $color) {
+  font-family: $futura-regular;
+  font-weight: $wight;
+  color: $color;
+}
+
+/// BUTTON
+@mixin button($wight, $color, $opacity) {
+  font-family: $futura-regular;
+  font-weight: $wight;
+  text-transform: uppercase;
+  color: $color;
+  opacity: $opacity;
 }

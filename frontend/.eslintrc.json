@@ -56,9 +56,11 @@
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module",
-        "project": "./tsconfig.json"
+        "project": "**/tsconfig.json"
     },
-    "ignorePatterns": ["webpack.config.js"],
+    "ignorePatterns": [
+        "webpack.config.js"
+    ],
     "rules": {
         //https://typescript-eslint.io/rules/no-confusing-void-expression
         "@typescript-eslint/no-confusing-void-expression": "error",

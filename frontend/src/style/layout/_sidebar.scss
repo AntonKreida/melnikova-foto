@@ -1,0 +1,59 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  overflow: auto;
+  padding: $padding-sidebar;
+  width: 100%;
+  height: 100vh;
+  max-width: $width-sidebar;
+
+  /* Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* IE и Edge Firefox */
+  & {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100%;
+    gap: 33%;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__title {
+    font-size: $size-title;
+    line-height: 1.28125;
+    text-align: left;
+  }
+
+  &__subtitle {
+    font-size: $size-subtitle;
+    line-height: 1.26;
+    opacity: 0.5;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+}
