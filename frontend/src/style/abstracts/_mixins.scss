@@ -13,6 +13,7 @@
 
 /// TITLE
 @mixin title($weight, $color) {
+  font-family: $gabriela;
   font-weight: $weight;
   text-transform: uppercase;
   color: $color;
@@ -25,6 +26,15 @@
   color: $color;
 }
 
+/// TEXT
+@mixin text($font-family, $wight, $size, $color, $height) {
+  font-family: $font-family;
+  font-weight: $wight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+}
+
 /// BUTTON
 @mixin button($wight, $color, $opacity) {
   font-family: $futura-regular;
@@ -32,4 +42,14 @@
   text-transform: uppercase;
   color: $color;
   opacity: $opacity;
+}
+
+///SLIDE ITEM
+@mixin slide-item($wight, $size) {
+  font-family: $futura-regular;
+  font-weight: $wight;
+  font-size: $size;
+  line-height: 1.28;
+  text-align: center;
+  text-transform: uppercase;
 }

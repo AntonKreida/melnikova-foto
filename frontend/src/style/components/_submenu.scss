@@ -10,7 +10,6 @@
   }
 
   &__item {
-    position: relative;
     display: block;
     margin-top: -50px;
     width: max-content;
@@ -20,36 +19,8 @@
       padding: $padding-list-item;
     }
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 3px;
-      height: 16px;
-      background: $gray;
-      opacity: 0;
-      transition: opacity 0.2s linear;
-    }
-
-    &:hover::before {
-      opacity: 1;
-    }
-
-    &:hover .nav__link {
-      color: $gray;
-    }
-
     &:last-child {
       padding: $padding-list-item-last;
-    }
-
-    &.active::before {
-      background: $alto;
-      opacity: 1;
-    }
-
-    &.active > .nav__link {
-      color: $alto;
     }
   }
 }

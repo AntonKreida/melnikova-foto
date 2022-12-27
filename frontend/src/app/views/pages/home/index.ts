@@ -1,5 +1,5 @@
-// IMPORT STYLE
-import '../../../../style/main.scss';
+import 'swiper/swiper-bundle.min.css';
 
-// IMPORT SCRIPT
-import './view';
+import '../../../../style/main.scss';
+import '../../../util/swiper';
+import '../../scripts/submenu';

@@ -7,6 +7,9 @@
 /// REGULAR FONT-FAMILY
 $gabriela: "Gabriela";
 $futura-regular: "FuturaPT-Medium";
+$futura-book: "FuturaPT-Book";
+$futura-light: "FuturaPT-Light";
+$futura-demi: "FuturaPT-Demi";
 
 /// COPY COLOR
 $white: #fff;
@@ -20,6 +23,7 @@ $gray: #848484;
 $width-sidebar: 359px;
 $width-social: 20px;
 $width-btn: 187px;
+$width-slide-item: 371px;
 
 /// HEIGHT COMPONENTS AND LAYOUT
 $height-social: 20px;
@@ -33,18 +37,27 @@ $padding-item: 15px 0;
 $padding-list: 15px 0 0 0;
 $padding-list-item: 15px 0 15px 10px;
 $padding-list-item-last: 15px 0 0 10px;
+$padding-container: 5% 0 5% 0;
+$padding-slide-item: 43px;
 
 /// FONT-SIZE
 $size-title: 36px;
 $size-subtitle: 15px;
 $size-nav: 11px;
 $size-tel: 14px;
+$size-slide-item: 32px;
+$size-about: 20px;
 
 ///FONT-WEIGHT
 $weight-title: 400;
 $weight-subtitle: 400;
 $weight-nav: 450;
 $weight-btn: 450;
+$weight-slide-item: 500;
+$weight-normal: 300;
+
+/// LINE-HEIGHT
+$line-height-about: 1.3;
 
 ///OPACITY
 $opacity-btn: 0.67;

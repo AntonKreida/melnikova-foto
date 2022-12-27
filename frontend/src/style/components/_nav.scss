@@ -7,8 +7,11 @@
   }
 
   &__item {
-    position: relative;
     padding: $padding-item;
+  }
+
+  &__link {
+    position: relative;
     width: max-content;
     transition: color 0.2s linear;
 
@@ -27,7 +30,7 @@
       opacity: 1;
     }
 
-    &:hover > .nav__link,
+    &:hover,
     &:hover svg path {
       color: $gray;
       fill: $gray;
@@ -39,37 +42,32 @@
       opacity: 1;
     }
 
-    &.active > .nav__link,
+    &.active,
     &.active svg path {
       color: $alto;
       fill: $alto;
       stroke: $alto;
     }
 
-    &.active .nav__link svg {
-      transform: rotate(360deg);
+    &.active svg {
+      transform: rotate(-180deg);
     }
 
-    &.active .submenu__list {
+    &.active + .submenu__list {
       padding: $padding-list;
       max-height: 100%;
     }
 
-    &.active .submenu__list .submenu__item {
+    &.active + .submenu__list .submenu__item {
       margin-top: 0;
       max-height: 100%;
     }
-  }
-
-  &__link {
-    transition: color 0.2s linear;
   }
 
   &__icon {
     width: 15px;
     height: 13px;
     fill: $mine-shaft;
-    transform: rotate(180deg);
     transition: all 0.3s linear;
 
     path {

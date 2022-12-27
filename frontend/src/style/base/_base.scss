@@ -1,7 +1,3 @@
-html {
-  box-sizing: border-box;
-}
-
 body {
   width: 100vw;
   height: 100vh;
@@ -22,7 +18,7 @@ body {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 a {
@@ -43,6 +39,8 @@ svg {
 
 img {
   display: block;
+  height: auto;
+  max-width: 100%;
 }
 
 ul {
@@ -55,4 +53,9 @@ ul {
 
 .subtitle {
   @include subtitle($weight-subtitle, $mine-shaft);
+}
+
+.container {
+  padding: $padding-container;
+  height: 100vh;
 }

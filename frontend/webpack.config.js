@@ -11,7 +11,8 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    index__home: path.resolve(__dirname, 'src/app/views/pages/home', 'index.ts'),
+    home: path.resolve(__dirname, 'src/app/views/pages/home', 'index.ts'),
+    about: path.resolve(__dirname, 'src/app/views/pages/about', 'index.ts'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -34,13 +35,22 @@ module.exports = {
       template: path.resolve(__dirname, 'src/app/views/pages/home/', 'index.pug'),
       path: path.resolve(__dirname, 'dist'),
       filename: 'index.html',
-      chunks: ['index__home'],
+      chunks: ['home'],
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src/app/views/pages/about/', 'about.pug'),
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'about.html',
+      chunks: ['about'],
       minify: {
         collapseWhitespace: isProd,
       },
     }),
     new MiniCssExtractPlugin({
-      filename: './style/main.css',
+      filename: './style/[name].css',
     }),
     new CopyPlugin({
       patterns: [{
@@ -52,9 +62,17 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [{
-        from: "*.svg",
-        to: "images/nav_icon",
-        context: path.resolve(__dirname, 'src', 'asset', 'images', 'nav_icon')
+        from: "*.jpg",
+        to: "images/",
+        context: path.resolve(__dirname, 'src', 'asset', 'images', 'about')
+      }
+      ],
+    }),
+    new CopyPlugin({
+      patterns: [{
+        from: "*.png",
+        to: "images/slide",
+        context: path.resolve(__dirname, 'src', 'asset', 'images', 'slide')
       }
       ],
     })

@@ -1,0 +1,27 @@
+.about {
+  @include text($futura-regular, $weight-normal, $size-about, $mine-shaft, $line-height-about);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__header {
+    font-family: $gabriela;
+    font-weight: $weight-title;
+  }
+
+  &__content {
+    font-family: $futura-light;
+  }
+
+  &__list li::before {
+    content: "🤍";
+    stroke: black;
+  }
+}
