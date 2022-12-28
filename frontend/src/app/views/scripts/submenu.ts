@@ -9,6 +9,8 @@ const viewSubmenu = {
       throw new Error('This is not the HTML element');
     }
 
+    controllerSubmenu.checkStatus(submenu);
+
     submenu.addEventListener('click', () => {
       controllerSubmenu.toggle();
       this.updateView(submenu);
@@ -25,5 +27,4 @@ const viewSubmenu = {
     }
   },
 };
-
 viewSubmenu.init();

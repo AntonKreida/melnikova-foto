@@ -1,7 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  margin-left: $width-sidebar;
+  margin-left: $margin-left-main;
   height: 100%;
 
   &__section {

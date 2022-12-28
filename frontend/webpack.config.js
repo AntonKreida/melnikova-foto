@@ -13,6 +13,7 @@ module.exports = {
   entry: {
     home: path.resolve(__dirname, 'src/app/views/pages/home', 'index.ts'),
     about: path.resolve(__dirname, 'src/app/views/pages/about', 'index.ts'),
+    lookbook: path.resolve(__dirname, 'src/app/views/pages/lookbook', 'index.ts'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -45,6 +46,15 @@ module.exports = {
       path: path.resolve(__dirname, 'dist'),
       filename: 'about.html',
       chunks: ['about'],
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src/app/views/pages/lookbook/', 'lookbook.pug'),
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'lookbook.html',
+      chunks: ['lookbook'],
       minify: {
         collapseWhitespace: isProd,
       },

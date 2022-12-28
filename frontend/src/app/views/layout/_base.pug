@@ -1,10 +1,8 @@
-include ../mixins/_submenu-item
-
-- var valueList =["Лукбуки", "Кампейн", "Предметное фото", "Бьюти съемка"]
-
 block vars 
     - var title = 'Home'
+    - var sectionTitle = ''
     - var activeAbout = ''
+    - var classSection = ''
 
 doctype html
 html(lang="ru")
@@ -12,7 +10,7 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title #{title}
+    title #{title = 'Home'}
   body
     block sidebar 
         aside(class="sidebar")
@@ -29,10 +27,11 @@ html(lang="ru")
                             a(class=`nav__link ${activeAbout}` href="./about.html")
                                 |Обо мне
                         li(class="nav__item")
-                            span(class="nav__link submenu js-submenu")
+                            span(class=`nav__link submenu ${activeSubmenu} js-submenu`)
                                 |Для брендов
                                 include ../components/_icon-svg.pug
-                            +submenu-list(valueList)
+                            block submenu
+                                include ./_submenu.pug
                         li(class="nav__item")
                             a(class="nav__link" href="/")
                                 |Для блогов и экспертов
@@ -58,5 +57,9 @@ html(lang="ru")
                             img(class="contacts__img" src="../images/social_icon/icon_telegram.png")
                         a(href="https://wa.me/89220070075")
                             img(class="contacts__img" src="../images/social_icon/icon_whatsapp.png")
-                    include ../components/_button.pug
-        block content        
+                    include ../components/_button.pug      
+        div(class="container")
+            main(class="main")
+                section(class=`main__section ${classSection=""}`)
+                    h1(class="main__title title")=sectionTitle
+                    block content  

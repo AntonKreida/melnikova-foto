@@ -1,4 +1,17 @@
 extends ../../layout/_base
 
+block vars
+  - var sectionTitle = "Профессиональная фотосъёмка в Тюмени"
+
 block content
-  include ../../layout/_section
+   div(class="main__slide swiper") 
+      div(class="main__inner swiper-wrapper")
+          div(class="main__item one swiper-slide")
+              a(href="./lookbook.html") 
+                |Лукбуки
+          div(class="main__item two swiper-slide")            
+              a(href="/")    
+                |Бьюти съёмка
+          div(class="main__item three swiper-slide")        
+              a(href="/")     
+                |Личные фотосессии  
