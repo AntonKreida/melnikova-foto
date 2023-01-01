@@ -6,7 +6,7 @@
   padding: $padding-btn;
   width: 100%;
   height: $height-btn;
-  max-width: $width-btn;
+  max-width: max-content;
   background: $white;
   transition: background 0.2s linear, color 0.2s linear;
   cursor: pointer;

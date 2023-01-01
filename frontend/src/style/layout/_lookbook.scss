@@ -1,0 +1,38 @@
+.lookbook {
+  gap: 60px;
+
+  &__images {
+    display: flex;
+    gap: 3px;
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+  }
+
+  &__title {
+    font-size: $size-title-item-lookbook;
+    color: $black;
+    text-transform: none;
+  }
+
+  &__text {
+    @include text($futura-book, $weight-normal, $size-text-item-lookbook, $black, $line-height-text-lookbook)
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}

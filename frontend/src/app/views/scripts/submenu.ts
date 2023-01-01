@@ -18,13 +18,9 @@ const viewSubmenu = {
   },
 
   updateView(submenu: HTMLElement) {
-    const { isOn, open } = modalSubmenu;
+    const { open } = modalSubmenu;
 
-    if (isOn) {
-      submenu.classList.add(open);
-    } else {
-      submenu.classList.remove(open);
-    }
+    submenu.classList.toggle(open);
   },
 };
 viewSubmenu.init();

@@ -11,8 +11,8 @@ import Swiper from 'swiper';
 const swiper = new Swiper('.swiper', {
   spaceBetween: 30,
   preloadImages: true,
-  resistance: true,
   slidesPerView: 2.62,
   watchOverflow: true,
   initialSlide: 0,
+  grabCursor: true,
 });

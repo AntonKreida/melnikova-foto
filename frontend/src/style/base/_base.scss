@@ -8,6 +8,7 @@ body {
   line-height: 1.28;
   color: $mine-shaft;
   background: $white;
+  overflow-x: hidden;
 }
 
 * {
@@ -41,6 +42,7 @@ img {
   display: block;
   height: auto;
   max-width: 100%;
+  border-radius: 5px;
 }
 
 ul {
@@ -57,5 +59,11 @@ ul {
 
 .container {
   padding: $padding-container;
-  height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
+
+  &--lookbook {
+    height: auto;
+    padding-right: $padding-lookbook-right;
+  }
 }

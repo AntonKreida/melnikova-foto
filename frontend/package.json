@@ -2,6 +2,7 @@
   "name": "melnikova-photographer",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://AntonKreida.github.io/melnikova-foto",
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode production",
@@ -11,7 +12,9 @@
     "eslint:fix": "eslint ./src --fix",
     "stylelint": "stylelint \"**/*.scss\"",
     "stylelint:fix": "stylelint \"**/*.scss\" --fix",
-    "lint": "eslint ./src && eslint ./src --fix"
+    "lint": "eslint ./src && eslint ./src --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Anton Kreida",
   "license": "ISC",
@@ -32,6 +35,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-prettier": "^4.2.1",
+    "gh-pages": "^4.0.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "import-typescript": "^1.0.0",

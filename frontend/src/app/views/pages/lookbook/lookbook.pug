@@ -1,9 +1,11 @@
-extends ../../layout/_base
+extends ../../layout/_base.pug
 
 block vars 
     - var title = "LookBook"
-    - var activeSubmenu = 'active'
+    - var activeSubmenu = "active"
     - var sectionTitle = "Лукбук для модельного агентства LIBERTY"
+    - var classTitleSection = "main__title--normal"
+    - var classContainer = 'container--lookbook'
 
 block submenu
     ul(class="submenu__list")
@@ -21,3 +23,4 @@ block submenu
                 |Бьюти съемка           
 
 block content
+    include ./init-content.pug

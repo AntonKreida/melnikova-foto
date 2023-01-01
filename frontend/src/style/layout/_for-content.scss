@@ -1,0 +1,22 @@
+.for-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 3px;
+  width: 100%;
+}
+
+.for-item {
+  text-align: center;
+  grid-column: span 4;
+  grid-row: span 6;
+  object-fit: cover;
+
+  &--big {
+    grid-column: span 8;
+  }
+
+  &--small {
+    grid-row: span 3;
+  }
+}

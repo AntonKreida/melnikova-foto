@@ -1,0 +1,42 @@
+extends ../../layout/_content.pug
+include ../../mixin/_button.pug
+
+block images
+    div(class="lookbook__img")
+        img(src='./images/lookbook/lookbook_one.jpg' alt='')
+    div(class="lookbook__img")    
+        img(src='./images/lookbook/lookbook_two.jpg' alt='')
+    div(class="lookbook__img")    
+        img(src='./images/lookbook/lookbook_thee.jpg' alt='')
+
+block info
+     div(class="lookbook__info")    
+        div(class="lookbook__info-item")
+            h1(class="lookbook__title title")
+                |Задачи:
+            div(class="lookbook__text")
+                p Организовать съёмку каталога и лукбука для нового бренда 
+        div(class="lookbook__info-item")
+            h1(class="lookbook__title title")
+                |Реализация:
+            div(class="lookbook__text")
+                p Ко мне часто обращаются новые бренды, т.к. для запуска нужно зачастую провести сразу несколько съёмок, как минимум каталог и имиджевую (или лукбук), а без опыта в этой сфере самостоятельно организовать такой процесс очень сложно, да и результат будет непредсказуем. Для съёмки lookbook на основе референсов клиента было выбрано общее стилистическое решение, подобраны локация и модели.
+
+block grid
+ div(class="for-content")
+    div(class="for-item")
+        img(src="./images/lookbook/lookbook_1.jpg", alt="")
+    div(class="for-item")
+        img(src="./images/lookbook/lookbook_2.jpg", alt="")
+    div(class="for-item")
+        img(src="./images/lookbook/lookbook_3.jpg", alt="")
+    div(class="for-item for-item--small")
+        img(src="./images/lookbook/lookbook_4.jpg", alt="")
+    div(class="for-item for-item--big")
+        img(src="./images/lookbook/lookbook_5.jpg", alt="")
+    div(class="for-item for-item--small")
+        img(src="./images/lookbook/lookbook_6.jpg", alt="")
+
+block button
+    div(class="lookbook__button")
+         +button('Узнать стоимость услуг →', 'button js-button')

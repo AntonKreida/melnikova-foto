@@ -73,19 +73,19 @@ module.exports = {
     new CopyPlugin({
       patterns: [{
         from: "*.jpg",
-        to: "images/",
+        to: "images/about",
         context: path.resolve(__dirname, 'src', 'asset', 'images', 'about')
       }
       ],
     }),
     new CopyPlugin({
       patterns: [{
-        from: "*.png",
-        to: "images/slide",
-        context: path.resolve(__dirname, 'src', 'asset', 'images', 'slide')
+        from: "*.jpg",
+        to: "images/lookbook",
+        context: path.resolve(__dirname, 'src', 'asset', 'images', 'lookbook')
       }
       ],
-    })
+    }),
   ],
   devtool: isProd ? false : 'source-map',
   optimization: {
