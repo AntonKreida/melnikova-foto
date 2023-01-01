@@ -60,7 +60,7 @@ module.exports = {
       },
     }),
     new MiniCssExtractPlugin({
-      filename: './style/[name].css',
+      filename: isProd ? './style/[name].[contenthash].css' : './style/[name].css',
     }),
     new CopyPlugin({
       patterns: [{

@@ -4,7 +4,7 @@
         "alwaysStrict": true,
         "outDir": "./dist/script/",
         "noImplicitAny": true,
-        "module": "es6",
+        "module": "ESNext",
         "target": "es6",
         "newLine": "crlf",
         "sourceMap": true,
