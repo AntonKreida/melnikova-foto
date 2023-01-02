@@ -2,31 +2,27 @@
   @include text($futura-book, $weight-upward, $size-upward, $alto, $line-height-upward);
 
   position: fixed;
-  top: 10px;
+  z-index: 1000;
   right: 5%;
+  top: 10px;
   display: flex;
-  gap: 5px;
   width: 85px;
   height: 24px;
   text-transform: uppercase;
-  visibility: hidden;
-  cursor: pointer;
   opacity: 0;
+  visibility: hidden;
   transition: opacity 0.2s linear, color 0.2s linear, text-shadow 0.2s linear;
+  cursor: pointer;
+  gap: 5px;
 
   & svg path {
     stroke: $alto;
     transition: stroke 0.2s linear, filter 0.2s linear;
   }
 
-  &.active {
-    visibility: visible;
-    opacity: 1;
-  }
-
   &:hover {
-    color: $white;
     text-shadow: 0 0 4px $black;
+    color: $white;
   }
 
   &:hover svg path {
@@ -40,5 +36,10 @@
 
   &:active svg path {
     stroke: $mine-shaft;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
   }
 }

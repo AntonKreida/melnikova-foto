@@ -2,50 +2,50 @@ extends ../../layout/_content.pug
 include ../../mixin/_button.pug
 
 block images
-    div(class="lookbook__img")
+    div(class="content__img" data-aos="zoom-in-right")
         a(data-fslightbox href="./images/lookbook/lookbook_one.jpg")
             img(src='./images/lookbook/lookbook_one.jpg' alt='')
-    div(class="lookbook__img")
+    div(class="content__img" data-aos="zoom-in-up")
         a(data-fslightbox href="./images/lookbook/lookbook_two.jpg")    
             img(src='./images/lookbook/lookbook_two.jpg' alt='')
-    div(class="lookbook__img")
+    div(class="content__img" data-aos="zoom-in-left")
         a(data-fslightbox href="./images/lookbook/lookbook_thee.jpg")    
             img(src='./images/lookbook/lookbook_thee.jpg' alt='')
 
 block info
-     div(class="lookbook__info")    
-        div(class="lookbook__info-item")
+     div(class="content__info" data-aos="fade-up")    
+        div(class="content__info-item")
             h1(class="lookbook__title title")
                 |Задачи:
-            div(class="lookbook__text")
+            div(class="content__text")
                 p Организовать съёмку каталога и лукбука для нового бренда 
-        div(class="lookbook__info-item")
-            h1(class="lookbook__title title")
+        div(class="content__info-item")
+            h1(class="content__title title")
                 |Реализация:
-            div(class="lookbook__text")
+            div(class="content__text")
                 p Ко мне часто обращаются новые бренды, т.к. для запуска нужно зачастую провести сразу несколько съёмок, как минимум каталог и имиджевую (или лукбук), а без опыта в этой сфере самостоятельно организовать такой процесс очень сложно, да и результат будет непредсказуем. Для съёмки lookbook на основе референсов клиента было выбрано общее стилистическое решение, подобраны локация и модели.
 
-block grid
+block items
  div(class="for-content")
-    div(class="for-item")
+    div(class="for-item" data-aos="fade-right")
         a(data-fslightbox href="./images/lookbook/lookbook_1.jpg")
             img(src="./images/lookbook/lookbook_1.jpg", alt="")
-    div(class="for-item")
+    div(class="for-item" data-aos="fade-up")
         a(data-fslightbox href="./images/lookbook/lookbook_2.jpg")
             img(src="./images/lookbook/lookbook_2.jpg", alt="")
-    div(class="for-item")
+    div(class="for-item" data-aos="fade-left")
         a(data-fslightbox href="./images/lookbook/lookbook_3.jpg")
             img(src="./images/lookbook/lookbook_3.jpg", alt="")
-    div(class="for-item for-item--small")
+    div(class="for-item for-item--small" data-aos="fade-right")
         a(data-fslightbox href="./images/lookbook/lookbook_4.jpg")
             img(src="./images/lookbook/lookbook_4.jpg", alt="")
-    div(class="for-item for-item--big")
+    div(class="for-item for-item--big" data-aos="fade-left")
         a(data-fslightbox href="./images/lookbook/lookbook_5.jpg")
             img(src="./images/lookbook/lookbook_5.jpg", alt="")
-    div(class="for-item for-item--small")
+    div(class="for-item for-item--small" data-aos="fade-right")
         a(data-fslightbox href="./images/lookbook/lookbook_6.jpg")
             img(src="./images/lookbook/lookbook_6.jpg", alt="")
 
 block button
-    div(class="lookbook__button")
+    div(class="content__button")
          +button('Узнать стоимость услуг →', 'button js-button')

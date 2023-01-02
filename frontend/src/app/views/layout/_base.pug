@@ -1,7 +1,7 @@
 include ../mixin/_button.pug
 
 block vars 
-    - var title = 'Home'
+    - var title = 'Александра Мельникова'
     - var sectionTitle = ''
     - var activeAbout = ''
     - var classSection = ''
@@ -14,7 +14,7 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title #{title = 'Home'}
+    title #{title}
   body
     div(class="upward js-upward")
         div(class="upward__text")
@@ -71,5 +71,9 @@ html(lang="ru")
         div(class=`container ${classContainer}`)
             main(class="main")
                 section(class=`main__section ${classSection}`)
-                    h1(class=`main__title title ${classTitleSection}`)=sectionTitle
+                    div(class="main__header")
+                        div(class="main__header-title")
+                            h1(class=`main__title title ${classTitleSection}`)=sectionTitle
+                            block subtitle
+                        block button-main    
                     block content

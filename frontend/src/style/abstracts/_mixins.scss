@@ -21,9 +21,12 @@
 
 /// SUBTITLE
 @mixin subtitle($wight, $color) {
-  font-family: $futura-regular;
+  font-family: $futura-light;
   font-weight: $wight;
+  font-size: 24px;
+  line-height: 1.2916;
   color: $color;
+  opacity: 0.7;
 }
 
 /// TEXT

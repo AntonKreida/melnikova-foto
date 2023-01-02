@@ -1,0 +1,33 @@
+extends ../../layout/_base.pug
+include ../../mixin/_button.pug
+
+block vars 
+    - var title = "Кампейн"
+    - var activeSubmenu = "active"
+    - var sectionTitle = "Кампейн"
+    - var classContainer = 'container--content'
+
+block submenu
+    ul(class="submenu__list")
+        li(class="submenu__item")
+            a(class="nav__link submenu__link" href="./lookbook.html")
+                |Лукбуки
+        li(class="submenu__item")
+            a(class="nav__link submenu__link active" href="./campagin.html")
+                |Кампейн
+        li(class="submenu__item")
+            a(class="nav__link submenu__link" href="./")
+                |Предметное фото
+        li(class="submenu__item")
+            a(class="nav__link submenu__link" href="./")
+                |Бьюти съемка
+
+block button-main
+    +button('Заказать съемку →', 'button js-button')
+
+block subtitle
+    h2(class="subtitle")
+        |атмосфера и образ всей истории коллекции
+
+block content
+    include ./init-content.pug                

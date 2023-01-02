@@ -1,4 +1,5 @@
 body {
+  overflow-x: hidden;
   width: 100vw;
   height: 100vh;
   font-family: $gabriela;
@@ -8,7 +9,6 @@ body {
   line-height: 1.28;
   color: $mine-shaft;
   background: $white;
-  overflow-x: hidden;
 }
 
 * {
@@ -23,7 +23,7 @@ body {
 }
 
 a {
-  display: inline-block;
+  display: block;
   max-width: max-content;
   text-decoration: none;
   color: $mine-shaft;
@@ -40,9 +40,9 @@ svg {
 
 img {
   display: block;
+  border-radius: 5px;
   height: auto;
   max-width: 100%;
-  border-radius: 5px;
 }
 
 ul {
@@ -58,12 +58,12 @@ ul {
 }
 
 .container {
+  overflow-x: hidden;
   padding: $padding-container;
   height: 100%;
-  overflow-x: hidden;
 
-  &--lookbook {
-    height: auto;
+  &--content {
     padding-right: $padding-lookbook-right;
+    height: auto;
   }
 }

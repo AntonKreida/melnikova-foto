@@ -26,5 +26,6 @@
         "index.d.ts",
         "**/*.ts",
         "./src/*.js",
+        "./src/app/util/*.js"
     ]
 }

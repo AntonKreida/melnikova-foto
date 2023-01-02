@@ -1,4 +1,4 @@
-.lookbook {
+.content {
   gap: 60px;
 
   &__images {
@@ -11,6 +11,8 @@
   }
 
   &__info {
+    @include text($futura-book, $weight-text, $size-text-info, $mine-shaft, $line-height-text-info);
+
     display: flex;
     justify-content: space-between;
   }
@@ -18,18 +20,18 @@
   &__info-item {
     display: flex;
     flex-direction: column;
-    gap: 15px;
     width: 50%;
+    gap: 15px;
   }
 
   &__title {
     font-size: $size-title-item-lookbook;
-    color: $black;
     text-transform: none;
+    color: $black;
   }
 
   &__text {
-    @include text($futura-book, $weight-normal, $size-text-item-lookbook, $black, $line-height-text-lookbook)
+    @include text($futura-book, $weight-normal, $size-text-item-lookbook, $black, $line-height-text-lookbook);
   }
 
   &__button {

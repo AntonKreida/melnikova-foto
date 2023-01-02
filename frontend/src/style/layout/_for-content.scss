@@ -2,21 +2,45 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  gap: 3px;
   width: 100%;
+  gap: 3px;
+
+  &--campagin {
+    gap: 60px;
+  }
 }
 
 .for-item {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
   grid-column: span 4;
   grid-row: span 6;
+  text-align: center;
   object-fit: cover;
+  gap: 30px;
+
+  &--small {
+    grid-row: span 3;
+  }
+
+  &--middle {
+    grid-column: span 6;
+  }
 
   &--big {
     grid-column: span 8;
   }
 
-  &--small {
-    grid-row: span 3;
+  &--very {
+    grid-column: span 12;
+    
+    & img {
+      height: 485px;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
   }
 }

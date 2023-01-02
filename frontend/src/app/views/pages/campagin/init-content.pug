@@ -1,0 +1,47 @@
+extends ../../layout/_content.pug
+include ../../mixin/_button.pug
+
+block images
+    div(class="content__img" data-aos="zoom-out")
+        img(src="./images/campagin/campaign_front.png")
+
+block info
+    div(class="content__info" data-aos="fade-up")
+        p 
+            |Кампейн — это рекламная съемка, результат
+            |которой будет использован для создания рекламных 
+            |материалов. А именно — печатная реклама в прессе 
+            |баннера для интернет-рекламы, внешняя реклама на 
+            |билбордах и пр. 
+            |Цель кампейна — передать главную идею (месседж) и настроение коллекции.
+
+block items
+   div(class="for-content for-content--campagin")
+    figure(class="for-item for-item--middle" data-aos="fade-right")
+        img(src="./images/campagin/case_one.png", alt="")
+        figcaption(class="for-item__title")
+            |Кейс №1
+    figure(class="for-item for-item--middle" data-aos="fade-left")
+        img(src="./images/campagin/case_two.png", alt="")
+        figcaption(class="for-item__title")
+            |Кейс №2
+    figure(class="for-item for-item--very" data-aos="flip-up")
+        img(src="./images/campagin/case_one.png", alt="")
+        figcaption(class="for-item__title")
+            |Кейс №1
+    figure(class="for-item for-item--small" data-aos="fade-right")
+        img(src="./images/campagin/case_one.png", alt="")
+        figcaption(class="for-item__title")
+            |Кейс №3
+    figure(class="for-item for-item--small" data-aos="fade-up")
+        img(src="./images/campagin/case_two.png", alt="")
+        figcaption(class="for-item__title")
+            |Кейс №4
+    figure(class="for-item for-item--small" data-aos="fade-left")
+        img(src="./images/campagin/case_two.png", alt="")
+        figcaption(class="for-item__title")
+            |Кейс №5
+
+block button
+    div(class="content__button")
+         +button('Узнать стоимость услуг →', 'button js-button')

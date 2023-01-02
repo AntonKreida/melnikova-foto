@@ -15,4 +15,8 @@
     color: $black;
     background: $gray;
   }
+
+  &:active {
+    background: $alto;
+  }
 }
