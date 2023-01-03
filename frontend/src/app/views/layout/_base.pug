@@ -4,6 +4,7 @@ block vars
     - var title = 'Александра Мельникова'
     - var sectionTitle = ''
     - var activeAbout = ''
+    - var activeGallery = ''
     - var classSection = ''
     - var classTitleSection = ''
     - var classContainer = ''
@@ -46,7 +47,7 @@ html(lang="ru")
                             a(class="nav__link" href="/")
                                 |Для блогов и экспертов
                         li(class="nav__item")
-                            a(class="nav__link" href="/")
+                            a(class=`nav__link ${activeGallery}` href="./gallery.html")
                                 |Личные фотосессии
                         li(class="nav__item")
                             a(class="nav__link" href="/")

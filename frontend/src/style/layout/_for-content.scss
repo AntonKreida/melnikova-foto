@@ -1,11 +1,10 @@
 .for-content {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(6, 1fr);
   width: 100%;
   gap: 3px;
 
-  &--campagin {
+  &--content {
     gap: 60px;
   }
 }
@@ -43,4 +42,8 @@
   &__title {
     font-size: 24px;
   }
+}
+
+.for-gallery {
+  cursor: pointer;
 }

@@ -15,6 +15,7 @@ module.exports = {
     about: path.resolve(__dirname, 'src/app/views/pages/about', 'index.ts'),
     lookbook: path.resolve(__dirname, 'src/app/views/pages/lookbook', 'index.ts'),
     campagin: path.resolve(__dirname, 'src/app/views/pages/campagin', 'index.ts'),
+    gallery: path.resolve(__dirname, 'src/app/views/pages/gallery', 'index.ts'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -69,6 +70,15 @@ module.exports = {
         collapseWhitespace: isProd,
       },
     }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src/app/views/pages/gallery/', 'gallery.pug'),
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'gallery.html',
+      chunks: ['gallery'],
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
     new MiniCssExtractPlugin({
       filename: isProd ? './style/[name].[contenthash].css' : './style/[name].css',
     }),
@@ -93,6 +103,11 @@ module.exports = {
           from: '*.{png, jpg}',
           to: 'images/campagin',
           context: path.resolve(__dirname, 'src', 'asset', 'images', 'campaign'),
+        },
+        {
+          from: '**/*.jpg',
+          to: 'images/gallery',
+          context: path.resolve(__dirname, 'src', 'asset', 'images', 'gallery'),
         },
       ],
     }),

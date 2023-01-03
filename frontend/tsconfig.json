@@ -4,7 +4,6 @@
         "alwaysStrict": true,
         "outDir": "./dist/script/",
         "noImplicitAny": true,
-        "module": "ESNext",
         "target": "es6",
         "newLine": "crlf",
         "sourceMap": true,
@@ -26,6 +25,5 @@
         "index.d.ts",
         "**/*.ts",
         "./src/*.js",
-        "./src/app/util/*.js"
-    ]
+    ],
 }

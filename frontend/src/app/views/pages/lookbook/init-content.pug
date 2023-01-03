@@ -1,16 +1,20 @@
 extends ../../layout/_content.pug
 include ../../mixin/_button.pug
 
-block images
-    div(class="content__img" data-aos="zoom-in-right")
-        a(data-fslightbox href="./images/lookbook/lookbook_one.jpg")
-            img(src='./images/lookbook/lookbook_one.jpg' alt='')
-    div(class="content__img" data-aos="zoom-in-up")
-        a(data-fslightbox href="./images/lookbook/lookbook_two.jpg")    
-            img(src='./images/lookbook/lookbook_two.jpg' alt='')
-    div(class="content__img" data-aos="zoom-in-left")
-        a(data-fslightbox href="./images/lookbook/lookbook_thee.jpg")    
-            img(src='./images/lookbook/lookbook_thee.jpg' alt='')
+block content-images
+    div(class='content__images')
+        block images
+        div(class="content__img" data-aos="zoom-in-right")
+            a(data-fslightbox href="./images/lookbook/lookbook_one.jpg")
+                img(src='./images/lookbook/lookbook_one.jpg' alt='')
+        div(class="content__img" data-aos="zoom-in-up")
+            a(data-fslightbox href="./images/lookbook/lookbook_two.jpg")    
+                img(src='./images/lookbook/lookbook_two.jpg' alt='')
+        div(class="content__img" data-aos="zoom-in-left")
+            a(data-fslightbox href="./images/lookbook/lookbook_thee.jpg")    
+                img(src='./images/lookbook/lookbook_thee.jpg' alt='')
+
+
 
 block info
      div(class="content__info" data-aos="fade-up")    

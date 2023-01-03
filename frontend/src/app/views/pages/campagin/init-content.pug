@@ -1,9 +1,11 @@
 extends ../../layout/_content.pug
 include ../../mixin/_button.pug
 
-block images
-    div(class="content__img" data-aos="zoom-out")
-        img(src="./images/campagin/campaign_front.png")
+block content-images
+    div(class='content__images')
+        block images
+            div(class="content__img" data-aos="zoom-out")
+                img(src="./images/campagin/campaign_front.png")
 
 block info
     div(class="content__info" data-aos="fade-up")
@@ -16,7 +18,7 @@ block info
             |Цель кампейна — передать главную идею (месседж) и настроение коллекции.
 
 block items
-   div(class="for-content for-content--campagin")
+   div(class="for-content for-content--content")
     figure(class="for-item for-item--middle" data-aos="fade-right")
         img(src="./images/campagin/case_one.png", alt="")
         figcaption(class="for-item__title")
