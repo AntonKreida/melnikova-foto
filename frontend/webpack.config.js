@@ -73,35 +73,27 @@ module.exports = {
       filename: isProd ? './style/[name].[contenthash].css' : './style/[name].css',
     }),
     new CopyPlugin({
-      patterns: [{
-        from: "*.png",
-        to: "images/social_icon",
-        context: path.resolve(__dirname, 'src', 'asset', 'images', 'social_icon')
-      }
-      ],
-    }),
-    new CopyPlugin({
-      patterns: [{
-        from: "*.jpg",
-        to: "images/about",
-        context: path.resolve(__dirname, 'src', 'asset', 'images', 'about')
-      }
-      ],
-    }),
-    new CopyPlugin({
-      patterns: [{
-        from: "*.jpg",
-        to: "images/lookbook",
-        context: path.resolve(__dirname, 'src', 'asset', 'images', 'lookbook')
-      }
-      ],
-    }),
-    new CopyPlugin({
-      patterns: [{
-        from: "*.{png, jpg}",
-        to: "images/campagin",
-        context: path.resolve(__dirname, 'src', 'asset', 'images', 'campaign')
-      }
+      patterns: [
+        {
+          from: '*.png',
+          to: 'images/social_icon',
+          context: path.resolve(__dirname, 'src', 'asset', 'images', 'social_icon'),
+        },
+        {
+          from: '*.jpg',
+          to: 'images/about',
+          context: path.resolve(__dirname, 'src', 'asset', 'images', 'about'),
+        },
+        {
+          from: '*.jpg',
+          to: 'images/lookbook',
+          context: path.resolve(__dirname, 'src', 'asset', 'images', 'lookbook'),
+        },
+        {
+          from: '*.{png, jpg}',
+          to: 'images/campagin',
+          context: path.resolve(__dirname, 'src', 'asset', 'images', 'campaign'),
+        },
       ],
     }),
   ],

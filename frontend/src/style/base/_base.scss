@@ -11,6 +11,10 @@ body {
   background: $white;
 }
 
+body.no--scroll {
+  overflow: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
