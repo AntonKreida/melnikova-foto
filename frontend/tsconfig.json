@@ -8,7 +8,7 @@
         "newLine": "crlf",
         "sourceMap": true,
         "allowJs": true,
-        "checkJs": true,
+        "checkJs": false,
         "moduleResolution": "node",
         "pretty": true,
         "rootDir": ".",
@@ -24,6 +24,6 @@
     "include": [
         "index.d.ts",
         "**/*.ts",
-        "./src/*.js",
+        "./src/*.js", "src/app/views/scripts/gallery.js", 
     ],
 }

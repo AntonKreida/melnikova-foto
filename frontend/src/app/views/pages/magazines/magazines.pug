@@ -1,0 +1,26 @@
+extends ../../layout/_base.pug
+include ../../mixin/_button.pug
+
+block vars 
+    - var title = "Публикация в журналах"
+    - var sectionTitle = "Публикация в журналах"
+    - var activeMagazines = 'active'
+    - var classContainer = 'container--content'
+
+block submenu
+    ul(class="submenu__list")
+        li(class="submenu__item")
+            a(class="nav__link submenu__link" href="./lookbook.html")
+                |Лукбуки
+        li(class="submenu__item")
+            a(class="nav__link submenu__link" href="./campagin.html")
+                |Кампейн
+        li(class="submenu__item")
+            a(class="nav__link submenu__link" href="./")
+                |Предметное фото
+        li(class="submenu__item")
+            a(class="nav__link submenu__link" href="./")
+                |Бьюти съемка
+
+block content
+    include ./init-content.pug 

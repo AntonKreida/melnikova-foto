@@ -36,5 +36,9 @@
 
   &__button {
     margin: 0 auto;
+
+    &--more {
+      margin: -40px 0;
+    }
   }
 }

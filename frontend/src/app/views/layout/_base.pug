@@ -5,6 +5,7 @@ block vars
     - var sectionTitle = ''
     - var activeAbout = ''
     - var activeGallery = ''
+    - var activeMagazines = ''
     - var classSection = ''
     - var classTitleSection = ''
     - var classContainer = ''
@@ -50,7 +51,7 @@ html(lang="ru")
                             a(class=`nav__link ${activeGallery}` href="./gallery.html")
                                 |Личные фотосессии
                         li(class="nav__item")
-                            a(class="nav__link" href="/")
+                            a(class=`nav__link ${activeMagazines}` href="./magazines.html")
                                 |Публикации в журнале
                         li(class="nav__item")
                             a(class="nav__link" href="/")
@@ -76,6 +77,6 @@ html(lang="ru")
                         div(class="main__header-title")
                             h1(class=`main__title title ${classTitleSection}`)=sectionTitle
                             block subtitle
-                        block button-main    
+                        block button-main   
                     block content
     include ./_form.pug

@@ -7,6 +7,10 @@
   &--content {
     gap: 60px;
   }
+
+  &--magazines {
+    gap: 0;
+  }
 }
 
 .for-item {
@@ -17,6 +21,10 @@
   text-align: center;
   object-fit: cover;
   gap: 30px;
+
+  &--very-small {
+    grid-column: span 2;
+  }
 
   &--small {
     grid-row: span 3;
@@ -32,7 +40,7 @@
 
   &--very {
     grid-column: span 12;
-    
+
     & img {
       height: 485px;
       object-fit: cover;
