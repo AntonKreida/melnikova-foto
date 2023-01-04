@@ -14,8 +14,8 @@
   &__header {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 17px;
     border-bottom: solid 3px $seashell;
+    padding-bottom: 17px;
   }
 
   &__title {
@@ -40,12 +40,12 @@
 
   &__point {
     &::before {
-      content: '';
+      content: "";
       display: inline-block;
-      height: 2px;
-      width: 8px;
-      margin-right: 5px;
       vertical-align: middle;
+      margin-right: 5px;
+      width: 8px;
+      height: 2px;
       background: $mine-shaft;
     }
   }
@@ -75,7 +75,6 @@
   }
 }
 
-
 .business {
   position: absolute;
   left: 0;
@@ -84,7 +83,7 @@
   transition: transform 0.3s linear;
 
   &.active {
-    transform: translateX(0);
     z-index: 100;
+    transform: translateX(0);
   }
 }

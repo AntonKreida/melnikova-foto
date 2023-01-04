@@ -5,29 +5,30 @@
 */
 
 // 1 - ABSTRACTS
-@import './abstracts/variables';
-@import './abstracts/mixins';
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
 
 // 2 - BASE
-@import './base/typography';
-@import './base/base';
+@import "./base/typography";
+@import "./base/base";
 
 // 3 - COMPONENTS
-@import './components/nav';
-@import './components/submenu';
-@import './components/contacts';
-@import './components/button';
-@import './components/scrollbar';
-@import './components/upward';
+@import "./components/nav";
+@import "./components/submenu";
+@import "./components/contacts";
+@import "./components/button";
+@import "./components/scrollbar";
+@import "./components/upward";
 
 // 4 - LAYOUT
-@import './layout/sidebar';
-@import './layout/main';
-@import './layout/swiper';
-@import './layout/about';
-@import './layout/content';
-@import './layout/for-content';
-@import './layout//form';
-@import './layout/price';
+@import "./layout/sidebar";
+@import "./layout/main";
+@import "./layout/swiper";
+@import "./layout/about";
+@import "./layout/content";
+@import "./layout/for-content";
+@import "./layout//form";
+@import "./layout/price";
+@import "./layout/testimonials";
 
 // 5 - PAGES

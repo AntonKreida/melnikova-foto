@@ -1,19 +1,19 @@
 .modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
   display: none;
   justify-content: flex-end;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgb(0 0 0 / 50%);
 
   &__inner {
     position: relative;
+    padding: 5% 30px;
     width: 359px;
     height: 100vh;
-    padding: 5% 30px;
     background: $white;
     transform: translateX(100%);
     transition: transform 0.2s linear;
@@ -28,10 +28,10 @@
     cursor: pointer;
 
     & svg {
-        transition: transform 0.2s linear;
+      transition: transform 0.2s linear;
     }
 
-    & svg path {  
+    & svg path {
       stroke: $mine-shaft;
       opacity: 0;
       transition: opacity 0.5s linear;
@@ -55,8 +55,8 @@
   &__header {
     display: flex;
     flex-direction: column;
-    gap: 7px;
     margin-bottom: 30px;
+    gap: 7px;
   }
 
   &__title {
@@ -76,56 +76,56 @@
   &__input {
     @include text($futura-book, $weight-text, $size-form-input, $mine-shaft, $line-height-input);
 
-    padding: 12px 20px;
     border: none;
+    padding: 12px 20px;
     text-align: left;
     background: $athens-gray;
 
-    &:focus {
-      outline: none;
-    }
-
     &::placeholder {
       color: $mine-shaft;
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 
   &__textarea {
     @include text($futura-book, $weight-text, $size-form-input, $mine-shaft, $line-height-input);
 
-    height: 90px;
-    padding: 12px 20px;
     border: none;
+    padding: 12px 20px;
+    height: 90px;
     text-align: left;
     background: $athens-gray;
     resize: none;
 
-    &:focus {
-      outline: none;
-    }
-
     &::placeholder {
       color: $mine-shaft;
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 
   &__footer {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     margin-top: auto;
+    gap: 20px;
   }
 
   &__button {
-    max-width: 100%;
-    height: auto;
     padding: 15px 100px;
+    height: auto;
+    max-width: 100%;
     font-family: $futura-light;
     font-size: 20px;
     line-height: 26px;
     color: $white;
-    opacity: 1;
     background: $mine-shaft;
+    opacity: 1;
   }
 
   &__massage {

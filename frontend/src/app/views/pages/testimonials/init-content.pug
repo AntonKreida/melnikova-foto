@@ -1,0 +1,19 @@
+extends ../../layout/_content.pug
+include ../../mixin/_button.pug
+
+block varsContent
+ - var content = 'testimonials'
+
+block items
+    div(class="testimonials__item" data-aos="fade-left")
+        div(class="testimonials__text")
+            p Мы искали фотографа на свадьбу буквально за несколько недель, и совершенно случайно узнали об Александре. Она настоящий профессионал и чуткий человек. Спасибо за атмосферные фотографии и поддержку!
+            p(class="testimonials__author") Анастасия
+        div(class="testimonials__avatar")
+            img(src='../images/testimonials/testimonials-one.png')    
+    div(class="testimonials__item" data-aos="fade-up")
+        div(class="testimonials__avatar")
+            img(src='../images/testimonials/testimonials-one.png')
+        div(class="testimonials__text")
+            p Мы искали фотографа на свадьбу буквально за несколько недель, и совершенно случайно узнали об Александре. Она настоящий профессионал и чуткий человек. Спасибо за атмосферные фотографии и поддержку!
+            p(class="testimonials__author") Анастасия      

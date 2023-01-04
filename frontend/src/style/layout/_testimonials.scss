@@ -1,0 +1,40 @@
+.testimonials {
+  gap: 50px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    gap: 100px;
+  }
+
+  &__text {
+    @include text($futura-light, $weight-normal, $size-testimonials, $mine-shaft-opacity, $line-height-testimonials);
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 380px;
+    gap: 14px;
+  }
+
+  &__author {
+    @include text($gabriela, $weight-text, $size-testimonials-author, $mine-shaft, $line-height-testimonials);
+
+    position: relative;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+      width: 8px;
+      height: 2px;
+      background: $mine-shaft;
+    }
+  }
+
+  &__avatar {
+    height: auto;
+  }
+}
