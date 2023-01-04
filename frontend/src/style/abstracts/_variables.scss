@@ -12,13 +12,15 @@ $futura-light: "FuturaPT-Light";
 $futura-demi: "FuturaPT-Demi";
 
 /// COPY COLOR
-$white: #fff;
-$black: #000;
-$mine-shaft: #333;
-$alto: #d9d9d9;
-$mercury: #e8e8e8;
-$gray: #848484;
-$athens-gray: #f5f5f6;
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$mine-shaft: rgb(51, 51, 51);
+$alto: rgb(217, 217, 217);
+$mercury: rgb(232, 232, 232);
+$gray: rgb(132, 132, 132);
+$athens-gray: rgb(245, 245, 246);
+$seashell: rgb(241, 241, 241);
+$nobel: rgb(181, 181, 181);
 
 /// WIDTH COMPONENTS AND LAYOUT
 $width-sidebar: 359px;
@@ -58,6 +60,11 @@ $size-upward: 16px;
 $size-text-info: 28px;
 $size-form-input: 14px;
 $size-form-footer: 10px;
+$size-item-title: 24px;
+$size-for-title: 24px;
+$size-button-main: 15px;
+$size-price-info: 20px;
+$size-price-subtext: 18px;
 
 ///FONT-WEIGHT
 $weight-title: 400;
@@ -68,14 +75,28 @@ $weight-slide-item: 500;
 $weight-normal: 300;
 $weight-text: 400;
 $weight-upward: 450;
+$weight-button-main: 500;
 
 /// LINE-HEIGHT
+$line-height-title: 1.28125;
+$line-height-subtitle: 1.26;
 $line-height-about: 1.3;
 $line-height-text-lookbook: 1.2778;
 $line-height-upward: 1.3125;
 $line-height-text-info: 1.2857;
 $line-height-input: 1.5;
 $line-height-form-footer: 1.3;
+$line-height-button-main: 1.26667;
+$line-height-price-info: 1.3;
+$line-height-price-subtext: 1.27778;
+
+///LETTER-SPACING
+$litter-spacing-subtitle: 10px;
+
+
+///BOX-SHADOW
+$box-shadow-sidebar: 0 0 10px 10px rgb(0 0 0 / 3%);
+
 
 ///OPACITY
 $opacity-btn: 0.67;

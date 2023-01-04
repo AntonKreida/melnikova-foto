@@ -1,0 +1,124 @@
+extends ../../layout/_content.pug
+include ../../mixin/_button.pug
+
+block varsContent
+    - var content = 'price__inner business js-price-business'
+
+block items
+    div(class="price__item")
+        div(class="price__header")
+            h1(class="price__title title")
+                |Пакет «Бизнес максимальный»
+            h2(class="price__value title")
+                |24.000 &#8381
+        div(class="price__info")
+            ul(class="price__list")
+                li(class="price__point")
+                    |Интервью по телефону или онлайн для выявления индивидуальных задач
+                li(class="price__point")
+                    |Разработка идеи и концепции
+                li(class="price__point")
+                    |Фотосъемка максимум в 2-х локациях
+                li(class="price__point")
+                    |Помощь в позировании
+            ul(class="price__list")
+                li(class="price__point")
+                    |Количество фотографий в ретуши 20-30, в цветокоррекции - 50-80
+                li(class="price__point")
+                    |5-7 коротких видео на смартфон
+                li(class="price__point")
+                    |Срок отдачи готовых кадров - до 14 дней
+                li(class="price__point")
+                    |Отдаю 5 готовых кадров в течение 24 часов после съемки
+        div(class="price__subinfo")
+            p(class="price__subtext")
+                |У меня есть слаженная команда из специалистов стилиста и визажиста, которых я рекомендую и координирую по задачам съемки. Их услуги и аренда студии оплачиваются отдельно.
+        +button("Заказать съемку →", "button price__button js-button-form")
+    div(class="price__item")
+        div(class="price__header")
+            h1(class="price__title title")
+                |Пакет «Бизнес популярный»
+            h2(class="price__value title")
+                |8.000 &#8381
+        div(class="price__info")
+            ul(class="price__list")
+                li(class="price__point")
+                    |Интервью по телефону или онлайн для выявления индивидуальных задач
+                li(class="price__point")
+                    |Разработка идеи и концепции
+                li(class="price__point")
+                    |Фотосъемка в течении 2 часов максимум в 2-х локациях
+                li(class="price__point")
+                    |Помощь в позировании
+            ul(class="price__list")
+                li(class="price__point")
+                    |Количество фотографий в ретуши 20-30, в цветокоррекции - 50-80
+                li(class="price__point")
+                    |5-7 коротких видео на смартфон
+                li(class="price__point")
+                    |Срок отдачи готовых кадров - до 14 дней
+                li(class="price__point")
+                    |Отдаю 5 готовых кадров в течение 24 часов после съемки
+        div(class="price__subinfo")
+            p(class="price__subtext")
+                |У меня есть слаженная команда из специалистов стилиста и визажиста, которых я рекомендую и координирую по задачам съемки. Их услуги и аренда студии оплачиваются отдельно.
+        +button("Заказать съемку →", "button price__button js-button-form")
+    div(class="price__item")
+        div(class="price__header")
+            h1(class="price__title title")
+                |Пакет «Бизнес стандарт»
+            h2(class="price__value title")
+                |5.000 &#8381
+        div(class="price__info")
+            ul(class="price__list")
+                li(class="price__point")
+                    |Интервью по телефону или онлайн для выявления индивидуальных задач
+                li(class="price__point")
+                    |Разработка идеи и концепции
+                li(class="price__point")
+                    |Фотосъемка в течении 1 часа в одной локации
+                li(class="price__point")
+                    |Помощь в позировании
+            ul(class="price__list")
+                li(class="price__point")
+                    |Количество фотографий в ретуши 25, в цветокоррекции - 40-50
+                li(class="price__point")
+                    |3 коротких видео на смартфон
+                li(class="price__point")
+                    |Срок отдачи готовых кадров - до 14 дней
+                li(class="price__point")
+                    |Отдаю 5 готовых кадров в течение 24 часов после съемки
+        div(class="price__subinfo")
+            p(class="price__subtext")
+                |У меня есть слаженная команда из специалистов стилиста и визажиста, которых я рекомендую и координирую по задачам съемки. Их услуги и аренда студии оплачиваются отдельно.
+        +button("Заказать съемку →", "button price__button js-button-form")
+    div(class="price__item")
+        div(class="price__header")
+            h1(class="price__title title")
+                |Пакет «Бизнес экспресс»
+            h2(class="price__value title")
+                |3.000 &#8381
+        div(class="price__subinfo")
+            p(class="price__subtext")
+                |Для тех, кому нужно разнообразить контент или кто пока не готов на длительную съемку. Подходит в формате лайфстайл на улице, кафе, коворкинге и других общественных местах        
+        div(class="price__info")
+            ul(class="price__list")
+                li(class="price__point")
+                    |Интервью по телефону или онлайн для выявления индивидуальных задач
+                li(class="price__point")
+                    |Разработка идеи и концепции
+                li(class="price__point")
+                    |Фотосъемка в течении 1 часа в одной локации
+                li(class="price__point")
+                    |Помощь в позировании
+            ul(class="price__list")
+                li(class="price__point")
+                    |Количество фотографий в ретуши 25, в цветокоррекции - 40-50
+                li(class="price__point")
+                    |3 коротких видео на смартфон
+                li(class="price__point")
+                    |Срок отдачи готовых кадров - до 14 дней
+                li(class="price__point")
+                    |Отдаю 5 готовых кадров в течение 24 часов после съемки
+        +button("Заказать съемку →", "button price__button js-button-form")    
+        

@@ -13,6 +13,11 @@
   }
 }
 
+.for-title {
+  font-size: $size-for-title;
+  margin-bottom: 12px;
+}
+
 .for-item {
   display: flex;
   flex-direction: column;
@@ -48,7 +53,7 @@
   }
 
   &__title {
-    font-size: 24px;
+    font-size: $size-item-title;
   }
 }
 

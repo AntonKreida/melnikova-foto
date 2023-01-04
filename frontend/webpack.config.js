@@ -17,6 +17,7 @@ module.exports = {
     campagin: path.resolve(__dirname, 'src/app/views/pages/campagin', 'index.ts'),
     gallery: path.resolve(__dirname, 'src/app/views/pages/gallery', 'index.ts'),
     magazines: path.resolve(__dirname, 'src/app/views/pages/magazines', 'index.ts'),
+    price: path.resolve(__dirname, 'src/app/views/pages/price', 'index.ts'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -85,6 +86,15 @@ module.exports = {
       path: path.resolve(__dirname, 'dist'),
       filename: 'magazines.html',
       chunks: ['magazines'],
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src/app/views/pages/price/', 'price.pug'),
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'price.html',
+      chunks: ['price'],
       minify: {
         collapseWhitespace: isProd,
       },

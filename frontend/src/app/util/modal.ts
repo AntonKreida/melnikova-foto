@@ -1,12 +1,11 @@
 const buttons = document.querySelectorAll('.js-button') as NodeList;
-const modal = document.querySelector('.js-modal') as HTMLElement;
-const modalInner = document.querySelector('.js-modal-inner') as HTMLElement;
-const svg = document.querySelector('.js-path') as SVGPathElement;
 const buttonModal = document.querySelector('.js-modal-button') as HTMLButtonElement;
-const body = document.querySelector('body') as HTMLBodyElement;
 
-const handlerModal = (event: Event) => {
-  event.preventDefault();
+const handlerModal = () => {
+  const body = document.querySelector('body') as HTMLBodyElement;
+  const modal = document.querySelector('.js-modal') as HTMLElement;
+  const modalInner = document.querySelector('.js-modal-inner') as HTMLElement;
+  const svg = document.querySelector('.js-path') as SVGPathElement;
 
   modal.classList.add('show');
   body.classList.add('no--scroll');
@@ -17,8 +16,11 @@ const handlerModal = (event: Event) => {
   }, 150);
 };
 
-const handlerCloseModal = (event: Event) => {
-  event.preventDefault();
+const handlerCloseModal = () => {
+  const body = document.querySelector('body') as HTMLBodyElement;
+  const modal = document.querySelector('.js-modal') as HTMLElement;
+  const modalInner = document.querySelector('.js-modal-inner') as HTMLElement;
+  const svg = document.querySelector('.js-path') as SVGPathElement;
 
   modalInner.style.transform = 'translateX(100%)';
   svg.style.opacity = '1';
@@ -34,3 +36,5 @@ buttons.forEach((button) => {
 });
 
 buttonModal.addEventListener('click', handlerCloseModal);
+
+export default handlerModal;

@@ -1,4 +1,7 @@
-div(class="main__inner main__inner--column content")
+block varsContent
+  - var content = 'content'
+
+div(class=`main__inner main__inner--column ${content}`)
     block content-images
       block images
     block info

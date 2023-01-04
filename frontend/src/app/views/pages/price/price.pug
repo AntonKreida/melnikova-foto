@@ -1,0 +1,20 @@
+extends ../../layout/_base.pug
+include ../../mixin/_button.pug
+
+block vars 
+    - var title = "Прайс"
+    - var sectionTitle = "Прайс"
+    - var activePrice = 'active'
+    - var classContainer = 'container--content'
+
+block button-main
+    div(class="main__box")
+        button(class="main__button active js-button-personal" type="button")
+            |Личные фотосессии
+        button(class="main__button js-button-business" type="button")
+            |Для бизнеса
+
+block content
+    div(class="price")
+        include ./init-personal-price.pug
+        include ./init-business-price.pug

@@ -8,7 +8,7 @@
   width: 100%;
   height: 100vh;
   max-width: $width-sidebar;
-  box-shadow: 0 0 10px 10px rgb(0 0 0 / 3%);
+  box-shadow:$box-shadow-sidebar;
 
   /* Chrome, Safari and Opera */
   &::-webkit-scrollbar {
@@ -38,14 +38,17 @@
 
   &__title {
     font-size: $size-title;
-    line-height: 1.28125;
+    line-height: $line-height-title;
     text-align: left;
   }
 
   &__subtitle {
-    font-family: $futura-regular;
+    font-family: $gabriela;
     font-size: $size-subtitle;
-    line-height: 1.26;
+    font-weight: $weight-subtitle;
+    line-height: $line-height-subtitle;
+    letter-spacing: $litter-spacing-subtitle;
+    text-transform: uppercase;
     opacity: 0.5;
   }
 

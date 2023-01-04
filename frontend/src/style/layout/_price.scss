@@ -1,0 +1,90 @@
+.price {
+  position: relative;
+  display: flex;
+
+  &__inner {
+    gap: 120px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 17px;
+    border-bottom: solid 3px $seashell;
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  &__value {
+    font-size: 20px;
+  }
+
+  &__info {
+    @include text($futura-book, $weight-text, $size-price-info, $mine-shaft, $line-height-price-info);
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__point {
+    &::before {
+      content: '';
+      display: inline-block;
+      height: 2px;
+      width: 8px;
+      margin-right: 5px;
+      vertical-align: middle;
+      background: $mine-shaft;
+    }
+  }
+
+  &__subinfo {
+    margin-top: 30px;
+  }
+
+  &__subtext {
+    @include text($futura-book, $weight-text, $size-price-subtext, $mine-shaft, $line-height-price-subtext);
+
+    opacity: 0.5;
+  }
+
+  &__button {
+    margin-top: 70px;
+  }
+}
+
+.personal {
+  display: none;
+  transition: opacity 0.3s linear;
+
+  &.active {
+    display: flex;
+    opacity: 1;
+  }
+}
+
+
+.business {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(110%);
+  transition: transform 0.3s linear;
+
+  &.active {
+    transform: translateX(0);
+    z-index: 100;
+  }
+}

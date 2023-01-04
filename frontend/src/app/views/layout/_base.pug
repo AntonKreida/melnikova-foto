@@ -6,6 +6,7 @@ block vars
     - var activeAbout = ''
     - var activeGallery = ''
     - var activeMagazines = ''
+    - var activePrice = ''
     - var classSection = ''
     - var classTitleSection = ''
     - var classContainer = ''
@@ -32,7 +33,7 @@ html(lang="ru")
                         h1(class="sidebar__title title")
                             |Александра Мельникова
                         h2(class="sidebar__subtitle subtitle")
-                            |Профессиональная съемка в Тюмени
+                            |PHOTOGRAPHER
                 nav(class="sidebar__nav nav")
                     ul(class="nav__list")
                         li(class="nav__item")
@@ -53,8 +54,8 @@ html(lang="ru")
                         li(class="nav__item")
                             a(class=`nav__link ${activeMagazines}` href="./magazines.html")
                                 |Публикации в журнале
-                        li(class="nav__item")
-                            a(class="nav__link" href="/")
+                        li(class=`nav__item`)
+                            a(class=`nav__link ${activePrice}` href="./price.html")
                                 |Прайс
                         li(class="nav__item")
                             a(class="nav__link" href="/")
@@ -74,7 +75,7 @@ html(lang="ru")
             main(class="main")
                 section(class=`main__section ${classSection}`)
                     div(class="main__header")
-                        div(class="main__header-title")
+                        div(class="main__box")
                             h1(class=`main__title title ${classTitleSection}`)=sectionTitle
                             block subtitle
                         block button-main   
